@@ -35,6 +35,9 @@ const feedbackReducer = (state = feedbackReducerInitialState, action) => {
 };
 
 const listReducer = (state = [], action) => {
+  if (action.type === "SET_LIST") {
+    return [...action.payload];
+  }
   return state;
 };
 
