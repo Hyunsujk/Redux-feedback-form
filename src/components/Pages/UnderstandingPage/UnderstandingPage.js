@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import TextField from "@material-ui/core/TextField";
 
 class UnderstandingPage extends Component {
   state = {
@@ -31,6 +32,8 @@ class UnderstandingPage extends Component {
   };
 
   render() {
+    const classes = this.props;
+
     return (
       <div className="App">
         <header className="App-header">
@@ -42,8 +45,10 @@ class UnderstandingPage extends Component {
         <br />
         <div>
           <h1>How well are you understanding the content?</h1>
-          <form>
-            <input
+          <form className={classes.root} noValidate autoComplete="off">
+            <TextField
+              id="standard-basic"
+              label="Understanding?"
               required
               type="text"
               placeholder="Understanding?"

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import TextField from "@material-ui/core/TextField";
 
 class FeelingPage extends Component {
   state = {
@@ -23,6 +24,8 @@ class FeelingPage extends Component {
   };
 
   render() {
+    const classes = this.props;
+
     return (
       <div className="App">
         <header className="App-header">
@@ -34,8 +37,10 @@ class FeelingPage extends Component {
         <br />
         <div>
           <h1>How are you feeling today?</h1>
-          <form>
-            <input
+          <form className={classes.root} noValidate autoComplete="off">
+            <TextField
+              id="standard-basic"
+              label="Feeling?"
               required
               text="number"
               placeholder="Feeling?"

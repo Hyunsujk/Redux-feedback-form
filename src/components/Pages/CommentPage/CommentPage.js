@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import TextField from "@material-ui/core/TextField";
 
 class CommentPage extends Component {
   state = {
@@ -26,6 +27,8 @@ class CommentPage extends Component {
   };
 
   render() {
+    const classes = this.props;
+
     return (
       <div className="App">
         <header className="App-header">
@@ -37,9 +40,10 @@ class CommentPage extends Component {
         <br />
         <div>
           <h1>Any comments you want to leave?</h1>
-          <form>
-            <input
-              required
+          <form className={classes.root} noValidate autoComplete="off">
+            <TextField
+              id="standard-basic"
+              label="Comments"
               type="text"
               placeholder="Comments"
               onChange={this.onInputChange}
