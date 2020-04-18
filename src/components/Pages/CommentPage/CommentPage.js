@@ -2,6 +2,24 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class CommentPage extends Component {
+  state = {
+    comment: "",
+  };
+
+  onInputChange = (event) => {
+    this.setState({
+      comment: event.target.value,
+    });
+  };
+
+  handleClick = (event) => {
+    event.preventDefault();
+    this.props.dispatch({
+      type: "SET_COMMENT",
+      payload: this.state.comment,
+    });
+    this.props.history.push("/review");
+  };
   render() {
     return (
       <div className="App">
@@ -15,7 +33,13 @@ class CommentPage extends Component {
         <div>
           <h1>Any comments you want to leave?</h1>
           <form>
-            <button>Next</button>
+            <input
+              required
+              type="number"
+              placeholder="Comments"
+              onChange={this.onInputChange}
+            />
+            <button onClick={this.handleClick}>Next</button>
           </form>
         </div>
       </div>
