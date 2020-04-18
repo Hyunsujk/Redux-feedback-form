@@ -1,16 +1,23 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
+import Home from "../Pages/Home/Home";
+import FeelingPage from "../Pages/FeelingPage/FeelingPage";
+import UnderstandingPage from "../Pages/UnderstandingPage/UnderstandingPage";
+import SupportPage from "../Pages/SupportPage/SupportPage";
+import CommentPage from "../Pages/CommentPage/CommentPage";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Feedback!</h1>
-          <h4><i>Don't forget it!</i></h4>
-        </header>
-        <br/>
+      <div>
+        <Router>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/feeling" component={FeelingPage} />
+          <Route exact path="/understanding" component={UnderstandingPage} />
+          <Route exact path="/support" component={SupportPage} />
+          <Route exact path="/comment" component={CommentPage} />
+        </Router>
       </div>
     );
   }
