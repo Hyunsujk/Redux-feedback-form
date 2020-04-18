@@ -7,7 +7,6 @@ class SubmissionPage extends Component {
       type: "RESET",
     });
     this.props.history.push("/");
-    console.log(this.props.store.feedbackReducer);
   };
   render() {
     return (
