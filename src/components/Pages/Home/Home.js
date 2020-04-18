@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 
 class Home extends Component {
+  handleClick = () => {
+    this.props.history.push("/feeling");
+  };
   render() {
     return (
       <div className="App">
@@ -12,7 +14,9 @@ class Home extends Component {
           </h4>
         </header>
         <br />
-        <button>Let us know how your day was!</button>
+        <button onClick={this.handleClick}>
+          Let us know how your day was!
+        </button>
       </div>
     );
   }

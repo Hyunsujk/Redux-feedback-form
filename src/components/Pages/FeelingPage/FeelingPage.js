@@ -2,6 +2,20 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class FeelingPage extends Component {
+  state = {
+    feeling: 0,
+  };
+
+  onInputChange = (event) => {
+    this.setState({
+      feeling: event.target.value,
+    });
+  };
+
+  handleClick = (event) => {
+    event.preventDefault();
+    this.props.dispatch({ type: "SET_FEELING", payload: this.state.feeling });
+  };
   render() {
     return (
       <div className="App">
@@ -15,7 +29,13 @@ class FeelingPage extends Component {
         <div>
           <h1>How are you feeling today?</h1>
           <form>
-            <button>Next</button>
+            <input
+              required
+              type="number"
+              placeholder="Feeling?"
+              onChange={this.onInputChange}
+            />
+            <button onClick={this.handleClick}>Next</button>
           </form>
         </div>
       </div>
