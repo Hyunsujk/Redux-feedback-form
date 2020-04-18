@@ -25,6 +25,11 @@ class SupportPage extends Component {
       this.props.history.push("/comment");
     }
   };
+
+  handleBackClick = (event) => {
+    this.props.history.push("/understanding");
+  };
+
   render() {
     return (
       <div className="App">
@@ -46,6 +51,7 @@ class SupportPage extends Component {
             />
             <button onClick={this.handleClick}>Next</button>
           </form>
+          <button onClick={this.handleBackClick}>Go Back</button>
         </div>
       </div>
     );

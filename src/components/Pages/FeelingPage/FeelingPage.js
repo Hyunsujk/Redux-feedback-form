@@ -37,9 +37,10 @@ class FeelingPage extends Component {
           <form>
             <input
               required
-              type="number"
+              text="number"
               placeholder="Feeling?"
               onChange={this.onInputChange}
+              //   value={this.props.store.feedbackReducer.feeling}
             />
             <button onClick={this.handleClick}>Next</button>
           </form>
@@ -49,4 +50,6 @@ class FeelingPage extends Component {
   }
 }
 
-export default connect()(FeelingPage);
+const mapStoreToProps = (store) => ({ store });
+
+export default connect(mapStoreToProps)(FeelingPage);

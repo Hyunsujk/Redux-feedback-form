@@ -23,10 +23,15 @@ class ReviewPage extends Component {
       });
   };
 
+  handleBackClick = (event) => {
+    this.props.history.push("/comment");
+  };
+
   render() {
     return (
       <div className="App">
         <h1>Review Your Feedback</h1>
+        <button onClick={this.handleBackClick}>Go Back</button>
         <h3>Feelings:{this.props.store.feedbackReducer.feeling}</h3>
         <h3>Understanding:{this.props.store.feedbackReducer.understanding}</h3>
         <h3>Support:{this.props.store.feedbackReducer.support}</h3>

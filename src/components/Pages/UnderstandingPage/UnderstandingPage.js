@@ -26,6 +26,10 @@ class UnderstandingPage extends Component {
     }
   };
 
+  handleBackClick = (event) => {
+    this.props.history.push("/feeling");
+  };
+
   render() {
     return (
       <div className="App">
@@ -41,16 +45,20 @@ class UnderstandingPage extends Component {
           <form>
             <input
               required
-              type="number"
+              type="text"
               placeholder="Understanding?"
               onChange={this.onInputChange}
+              //   value={this.props.store.feedbackReducer.understanding}
             />
             <button onClick={this.handleClick}>Next</button>
           </form>
+          <button onClick={this.handleBackClick}>Go Back</button>
         </div>
       </div>
     );
   }
 }
 
-export default connect()(UnderstandingPage);
+const mapStoreToProps = (store) => ({ store });
+
+export default connect(mapStoreToProps)(UnderstandingPage);
