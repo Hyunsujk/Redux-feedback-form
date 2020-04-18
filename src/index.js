@@ -27,6 +27,9 @@ const feedbackReducer = (state = feedbackReducerInitialState, action) => {
   if (action.type === "SET_COMMENT") {
     return { ...state, comment: action.payload };
   }
+  if (action.type === "RESET") {
+    return { feeling: 0, understanding: 0, support: 0, comment: "" };
+  }
 
   return state;
 };

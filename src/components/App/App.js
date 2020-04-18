@@ -7,6 +7,7 @@ import UnderstandingPage from "../Pages/UnderstandingPage/UnderstandingPage";
 import SupportPage from "../Pages/SupportPage/SupportPage";
 import CommentPage from "../Pages/CommentPage/CommentPage";
 import ReviewPage from "../Pages/ReviewPage/ReviewPage";
+import SubmissionPage from "../Pages/SubmissionPage/SubmissionPage";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
           <Route exact path="/support" component={SupportPage} />
           <Route exact path="/comment" component={CommentPage} />
           <Route exact path="/review" component={ReviewPage} />
+          <Route exact path="/submission" component={SubmissionPage} />
         </Router>
       </div>
     );
