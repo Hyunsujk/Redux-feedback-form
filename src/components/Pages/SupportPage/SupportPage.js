@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 class SupportPage extends Component {
   state = {
-    support: 0,
+    support: "",
   };
 
   onInputChange = (event) => {
@@ -15,7 +15,7 @@ class SupportPage extends Component {
   handleClick = (event) => {
     event.preventDefault();
 
-    if (this.state.support === 0) {
+    if (!this.state.support) {
       alert("Let us know how well you were supported!");
     } else {
       this.props.dispatch({

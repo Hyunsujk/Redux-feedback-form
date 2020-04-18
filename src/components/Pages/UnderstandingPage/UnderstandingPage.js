@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 class UnderstandingPage extends Component {
   state = {
-    understanding: 0,
+    understanding: "",
   };
 
   onInputChange = (event) => {
@@ -15,7 +15,7 @@ class UnderstandingPage extends Component {
   handleClick = (event) => {
     event.preventDefault();
 
-    if (this.state.understanding === 0) {
+    if (!this.state.understanding) {
       alert("Let us know how well you understood!");
     } else {
       this.props.dispatch({

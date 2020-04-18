@@ -8,9 +8,9 @@ import { Provider } from "react-redux";
 import logger from "redux-logger";
 
 const feedbackReducerInitialState = {
-  feeling: 0,
-  understanding: 0,
-  support: 0,
+  feeling: "",
+  understanding: "",
+  support: "",
   comment: "",
 };
 
@@ -28,7 +28,7 @@ const feedbackReducer = (state = feedbackReducerInitialState, action) => {
     return { ...state, comment: action.payload };
   }
   if (action.type === "RESET") {
-    return { feeling: 0, understanding: 0, support: 0, comment: "" };
+    return { feeling: "", understanding: "", support: "", comment: "" };
   }
 
   return state;

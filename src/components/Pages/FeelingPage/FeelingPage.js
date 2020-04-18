@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 class FeelingPage extends Component {
   state = {
-    feeling: 0,
+    feeling: "",
   };
 
   onInputChange = (event) => {
@@ -14,8 +14,7 @@ class FeelingPage extends Component {
 
   handleClick = (event) => {
     event.preventDefault();
-
-    if (this.state.feeling === 0) {
+    if (!this.state.feeling) {
       alert("Let us know how you feel!");
     } else {
       this.props.dispatch({ type: "SET_FEELING", payload: this.state.feeling });
