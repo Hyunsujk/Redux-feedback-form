@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+import Button from "@material-ui/core/Button";
 
 class Home extends Component {
   handleClick = () => {
     this.props.history.push("/feeling");
   };
   render() {
+    const classes = this.props;
+
     return (
       <div className="App">
         <header className="App-header">
@@ -14,9 +17,11 @@ class Home extends Component {
           </h4>
         </header>
         <br />
-        <button onClick={this.handleClick}>
-          Let us know how your day was!
-        </button>
+        <div className={classes.root}>
+          <Button variant="contained" onClick={this.handleClick}>
+            Let us know how your day was!
+          </Button>
+        </div>
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 class UnderstandingPage extends Component {
   state = {
@@ -43,9 +44,9 @@ class UnderstandingPage extends Component {
           </h4>
         </header>
         <br />
-        <div>
+        <div className={classes.root}>
           <h1>How well are you understanding the content?</h1>
-          <form className={classes.root} noValidate autoComplete="off">
+          <form noValidate autoComplete="off">
             <TextField
               id="standard-basic"
               label="Understanding?"
@@ -54,9 +55,13 @@ class UnderstandingPage extends Component {
               placeholder="Understanding?"
               onChange={this.onInputChange}
             />
-            <button onClick={this.handleClick}>Next</button>
+            <Button variant="contained" onClick={this.handleClick}>
+              Next
+            </Button>
           </form>
-          <button onClick={this.handleBackClick}>Go Back</button>
+          <Button variant="contained" onClick={this.handleBackClick}>
+            Go Back
+          </Button>
         </div>
       </div>
     );
