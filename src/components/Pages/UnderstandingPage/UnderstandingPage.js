@@ -48,7 +48,6 @@ class UnderstandingPage extends Component {
               type="text"
               placeholder="Understanding?"
               onChange={this.onInputChange}
-              //   value={this.props.store.feedbackReducer.understanding}
             />
             <button onClick={this.handleClick}>Next</button>
           </form>

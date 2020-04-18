@@ -34,9 +34,14 @@ const feedbackReducer = (state = feedbackReducerInitialState, action) => {
   return state;
 };
 
+const listReducer = (state = [], action) => {
+  return state;
+};
+
 const storeInstance = createStore(
   combineReducers({
     feedbackReducer,
+    listReducer,
   }),
   applyMiddleware(logger)
 );

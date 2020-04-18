@@ -40,7 +40,6 @@ class FeelingPage extends Component {
               text="number"
               placeholder="Feeling?"
               onChange={this.onInputChange}
-              //   value={this.props.store.feedbackReducer.feeling}
             />
             <button onClick={this.handleClick}>Next</button>
           </form>
