@@ -52,16 +52,18 @@ class UnderstandingPage extends Component {
               label="Understanding?"
               required
               type="text"
-              placeholder="Understanding?"
+              placeholder="1-5"
               onChange={this.onInputChange}
             />
             <Button variant="contained" onClick={this.handleClick}>
               Next
             </Button>
           </form>
-          <Button variant="contained" onClick={this.handleBackClick}>
-            Go Back
-          </Button>
+          <div className="btn-back">
+            <Button variant="contained" onClick={this.handleBackClick}>
+              Go Back
+            </Button>
+          </div>
         </div>
       </div>
     );

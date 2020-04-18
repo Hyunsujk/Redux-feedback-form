@@ -59,9 +59,11 @@ class SupportPage extends Component {
               Next
             </Button>
           </form>
-          <Button variant="contained" onClick={this.handleBackClick}>
-            Go Back
-          </Button>
+          <div className="btn-back">
+            <Button variant="contained" onClick={this.handleBackClick}>
+              Go Back
+            </Button>
+          </div>
         </div>
       </div>
     );

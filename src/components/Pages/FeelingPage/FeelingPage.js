@@ -19,7 +19,10 @@ class FeelingPage extends Component {
     if (!this.state.feeling) {
       alert("Let us know how you feel!");
     } else {
-      this.props.dispatch({ type: "SET_FEELING", payload: this.state.feeling });
+      this.props.dispatch({
+        type: "SET_FEELING",
+        payload: this.state.feeling,
+      });
       this.props.history.push("/understanding");
     }
   };
@@ -44,7 +47,7 @@ class FeelingPage extends Component {
               label="Feeling?"
               required
               text="number"
-              placeholder="Feeling?"
+              placeholder="1-5"
               onChange={this.onInputChange}
             />
             <Button variant="contained" onClick={this.handleClick}>
