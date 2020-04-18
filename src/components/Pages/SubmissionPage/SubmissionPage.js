@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import Button from "@material-ui/core/Button";
 
 class SubmissionPage extends Component {
   handleClick = (event) => {
@@ -9,14 +10,18 @@ class SubmissionPage extends Component {
     this.props.history.push("/");
   };
   render() {
+    const classes = this.props;
+
     return (
       <div>
         <div>
           <h2>Feedback!</h2>
         </div>
-        <div>
+        <div className={classes.root}>
           <h2>Thank You!</h2>
-          <button onClick={this.handleClick}>Leave New Feedback</button>
+          <Button variant="contained" onClick={this.handleClick}>
+            Leave New Feedback
+          </Button>
         </div>
       </div>
     );
