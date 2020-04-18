@@ -12,9 +12,15 @@ class UnderstandingPage extends Component {
           </h4>
         </header>
         <br />
+        <div>
+          <h1>How well are you understanding the content?</h1>
+          <form>
+            <button>Next</button>
+          </form>
+        </div>
       </div>
     );
   }
 }
 
-export default UnderstandingPage;
+export default connect()(UnderstandingPage);

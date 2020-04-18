@@ -12,9 +12,15 @@ class FeelingPage extends Component {
           </h4>
         </header>
         <br />
+        <div>
+          <h1>How are you feeling today?</h1>
+          <form>
+            <button>Next</button>
+          </form>
+        </div>
       </div>
     );
   }
 }
 
-export default FeelingPage;
+export default connect()(FeelingPage);

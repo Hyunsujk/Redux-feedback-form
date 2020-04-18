@@ -12,9 +12,15 @@ class CommentPage extends Component {
           </h4>
         </header>
         <br />
+        <div>
+          <h1>Any comments you want to leave?</h1>
+          <form>
+            <button>Next</button>
+          </form>
+        </div>
       </div>
     );
   }
 }
 
-export default CommentPage;
+export default connect()(CommentPage);

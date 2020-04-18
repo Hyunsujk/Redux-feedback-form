@@ -12,9 +12,15 @@ class SupportPage extends Component {
           </h4>
         </header>
         <br />
+        <div>
+          <h1>How well are you being supported?</h1>
+          <form>
+            <button>Next</button>
+          </form>
+        </div>
       </div>
     );
   }
 }
 
-export default SupportPage;
+export default connect()(SupportPage);
