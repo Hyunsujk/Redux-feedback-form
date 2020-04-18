@@ -1,0 +1,19 @@
+table {
+  border-collapse: collapse;
+  margin-left: 5%;
+  width: 90%;
+}
+
+thead {
+  background-color: lightblue;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

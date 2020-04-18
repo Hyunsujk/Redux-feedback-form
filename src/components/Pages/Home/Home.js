@@ -18,7 +18,12 @@ class Home extends Component {
         </header>
         <br />
         <div className={classes.root}>
-          <Button variant="contained" onClick={this.handleClick}>
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            onClick={this.handleClick}
+          >
             Let us know how your day was!
           </Button>
         </div>
