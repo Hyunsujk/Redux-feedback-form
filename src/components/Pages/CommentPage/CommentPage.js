@@ -35,7 +35,7 @@ class CommentPage extends Component {
           <form>
             <input
               required
-              type="number"
+              type="text"
               placeholder="Comments"
               onChange={this.onInputChange}
             />

@@ -12,9 +12,17 @@ class ReviewPage extends Component {
     };
 
     console.log(feedback);
-
-    // this.props.history.push("/");
+    axios
+      .post("/feedback", feedback)
+      .then((response) => {
+        console.log(response.data);
+        this.props.history.push("/");
+      })
+      .catch((err) => {
+        console.warn(err);
+      });
   };
+
   render() {
     return (
       <div className="App">
