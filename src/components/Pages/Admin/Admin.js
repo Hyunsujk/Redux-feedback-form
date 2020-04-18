@@ -31,7 +31,7 @@ class Admin extends Component {
           <h1 className="App-title">Feedback Results!</h1>
         </header>
         <br />
-        <FeedbackList />
+        <FeedbackList getList={this.getList} />
       </div>
     );
   }

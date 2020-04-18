@@ -31,8 +31,6 @@ class ReviewPage extends Component {
   };
 
   render() {
-    const classes = this.props;
-
     return (
       <div className="App center">
         <Card className="card ">

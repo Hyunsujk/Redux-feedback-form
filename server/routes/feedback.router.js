@@ -37,4 +37,18 @@ router.get("/", (req, res) => {
     });
 });
 
+router.delete("/:id", (req, res) => {
+  let reqId = req.params.id;
+  const queryString = `DELETE FROM "feedback" WHERE id=$1;`;
+  pool
+    .query(queryString, [reqId])
+    .then((response) => {
+      res.sendStatus(200);
+    })
+    .catch((err) => {
+      console.log("Error deleting query");
+      res.sendStatus(500);
+    });
+});
+
 module.exports = router;

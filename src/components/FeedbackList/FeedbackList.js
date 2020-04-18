@@ -5,7 +5,13 @@ import FeedbackListItem from "../FeedbackListItem/FeedbackListItem";
 class FeedbackList extends Component {
   render() {
     const feedbackList = this.props.store.listReducer.map((item, index) => {
-      return <FeedbackListItem key={index} feedback={item} />;
+      return (
+        <FeedbackListItem
+          key={index}
+          feedback={item}
+          getList={this.props.getList}
+        />
+      );
     });
     return (
       <div>
