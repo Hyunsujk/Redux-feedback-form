@@ -14,7 +14,13 @@ class FeelingPage extends Component {
 
   handleClick = (event) => {
     event.preventDefault();
-    this.props.dispatch({ type: "SET_FEELING", payload: this.state.feeling });
+
+    if (this.state.feeling === 0) {
+      alert("Let us know how you feel!");
+    } else {
+      this.props.dispatch({ type: "SET_FEELING", payload: this.state.feeling });
+      this.props.history.push("/understanding");
+    }
   };
   render() {
     return (
