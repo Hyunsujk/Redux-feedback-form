@@ -19,7 +19,11 @@ class SubmissionPage extends Component {
         </div>
         <div className={classes.root}>
           <h2>Thank You!</h2>
-          <Button variant="contained" onClick={this.handleClick}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={this.handleClick}
+          >
             Leave New Feedback
           </Button>
         </div>
