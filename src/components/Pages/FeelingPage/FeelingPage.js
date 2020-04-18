@@ -22,6 +22,7 @@ class FeelingPage extends Component {
       this.props.history.push("/understanding");
     }
   };
+
   render() {
     return (
       <div className="App">
