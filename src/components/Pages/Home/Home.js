@@ -12,6 +12,7 @@ class Home extends Component {
           </h4>
         </header>
         <br />
+        <button>Let us know how your day was!</button>
       </div>
     );
   }
