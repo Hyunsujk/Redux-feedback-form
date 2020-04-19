@@ -8,12 +8,14 @@ class UnderstandingPage extends Component {
     understanding: "",
   };
 
+  // capture entered value
   onInputChange = (event) => {
     this.setState({
       understanding: event.target.value,
     });
   };
 
+  //store the entered value to the reducer and guide user to next page
   handleClick = (event) => {
     event.preventDefault();
 
@@ -28,6 +30,7 @@ class UnderstandingPage extends Component {
     }
   };
 
+  // take user back to previous page
   handleBackClick = (event) => {
     this.props.history.push("/feeling");
   };

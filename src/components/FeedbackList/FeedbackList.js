@@ -4,6 +4,7 @@ import FeedbackListItem from "../FeedbackListItem/FeedbackListItem";
 
 class FeedbackList extends Component {
   render() {
+    // map the listReducer to display every single item in the table
     const feedbackList = this.props.store.listReducer.map((item, index) => {
       return (
         <FeedbackListItem

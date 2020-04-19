@@ -5,6 +5,8 @@ import Card from "@material-ui/core/Card";
 import "./SubmissionPage.css";
 
 class SubmissionPage extends Component {
+  // when the user clicks the button, update the reducer with initial state
+  // and bring the user back to home page
   handleClick = (event) => {
     this.props.dispatch({
       type: "RESET",

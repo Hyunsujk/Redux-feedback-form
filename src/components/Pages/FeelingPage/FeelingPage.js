@@ -8,12 +8,14 @@ class FeelingPage extends Component {
     feeling: "",
   };
 
+  // capture entered value
   onInputChange = (event) => {
     this.setState({
       feeling: event.target.value,
     });
   };
 
+  //store the entered value to the reducer and guide user to next page
   handleClick = (event) => {
     event.preventDefault();
     if (!this.state.feeling) {

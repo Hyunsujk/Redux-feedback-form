@@ -5,11 +5,13 @@ import DeleteSweepIcon from "@material-ui/icons/DeleteSweep";
 import axios from "axios";
 
 class FeedbackListItem extends Component {
+  // when delete button is clicked, send the id of the item to deleteFeedback function
   handleDelete = (event) => {
     const itemId = this.props.feedback.id;
     this.deleteFeedback(itemId);
   };
 
+  // delete the data of the id in database and get updated list from the database.
   deleteFeedback = (id) => {
     axios
       .delete(`/feedback/${id}`)

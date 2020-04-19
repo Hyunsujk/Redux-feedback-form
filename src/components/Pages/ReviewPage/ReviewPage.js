@@ -6,6 +6,10 @@ import Card from "@material-ui/core/Card";
 import "./ReviewPage.css";
 
 class ReviewPage extends Component {
+  // call back values stored in the reducer.
+  // when the user clicks submit button,
+  // send the data to server to store it in database
+  // and take user to the next page
   handleSubmit = (event) => {
     const feedback = {
       feeling: this.props.store.feedbackReducer.feeling,
@@ -26,6 +30,7 @@ class ReviewPage extends Component {
       });
   };
 
+  // take user back to previous page
   handleBackClick = (event) => {
     this.props.history.push("/comment");
   };

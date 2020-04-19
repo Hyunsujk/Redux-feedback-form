@@ -8,12 +8,14 @@ class CommentPage extends Component {
     comment: "",
   };
 
+  // capture entered value
   onInputChange = (event) => {
     this.setState({
       comment: event.target.value,
     });
   };
 
+  //store the entered value to the reducer and guide user to next page
   handleClick = (event) => {
     event.preventDefault();
     this.props.dispatch({
@@ -23,6 +25,7 @@ class CommentPage extends Component {
     this.props.history.push("/review");
   };
 
+  // take user back to previous page
   handleBackClick = (event) => {
     this.props.history.push("/support");
   };

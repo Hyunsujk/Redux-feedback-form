@@ -8,12 +8,14 @@ class SupportPage extends Component {
     support: "",
   };
 
+  // capture entered value
   onInputChange = (event) => {
     this.setState({
       support: event.target.value,
     });
   };
 
+  //store the entered value to the reducer and guide user to next page
   handleClick = (event) => {
     event.preventDefault();
 
@@ -28,6 +30,7 @@ class SupportPage extends Component {
     }
   };
 
+  // take user back to previous page
   handleBackClick = (event) => {
     this.props.history.push("/understanding");
   };

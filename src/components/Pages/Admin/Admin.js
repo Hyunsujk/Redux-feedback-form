@@ -5,10 +5,12 @@ import FeedbackList from "../../FeedbackList/FeedbackList";
 import "./Admin.css";
 
 class Admin extends Component {
+  // after component is mounted, get list from database
   componentDidMount() {
     this.getList();
   }
 
+  // get list of feedback from database and save it in reducer
   getList = () => {
     axios
       .get("/feedback")

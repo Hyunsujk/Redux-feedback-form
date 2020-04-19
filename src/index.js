@@ -7,6 +7,8 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import logger from "redux-logger";
 
+// setting the initial state of feedback reducer.
+// when the user submit the feedback form, reducer state will be updated with the initial state.
 const feedbackReducerInitialState = {
   feeling: "",
   understanding: "",
@@ -14,6 +16,7 @@ const feedbackReducerInitialState = {
   comment: "",
 };
 
+// depends on the action type, different object key will be update with the incoming value
 const feedbackReducer = (state = feedbackReducerInitialState, action) => {
   if (action.type === "SET_FEELING") {
     return { ...state, feeling: action.payload };
@@ -34,6 +37,7 @@ const feedbackReducer = (state = feedbackReducerInitialState, action) => {
   return state;
 };
 
+// created separate reducer to store a feedback list coming from database
 const listReducer = (state = [], action) => {
   if (action.type === "SET_LIST") {
     return [...action.payload];

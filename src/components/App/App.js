@@ -10,6 +10,7 @@ import ReviewPage from "../Pages/ReviewPage/ReviewPage";
 import SubmissionPage from "../Pages/SubmissionPage/SubmissionPage";
 import Admin from "../Pages/Admin/Admin";
 
+// setting path for each component
 class App extends Component {
   render() {
     return (
