@@ -18,11 +18,9 @@ class ReviewPage extends Component {
       comment: this.props.store.feedbackReducer.comment,
     };
 
-    console.log(feedback);
     axios
       .post("/feedback", feedback)
       .then((response) => {
-        console.log(response.data);
         this.props.history.push("/submission");
       })
       .catch((err) => {
